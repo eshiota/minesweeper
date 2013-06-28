@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]> <html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie10 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="lt-ie10 lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Minesweeper</title>
+
+  <meta name="description" content="Challenge from http://www.thumbtack.com/">
+  <meta name="author" content="Eduardo Shiota Yasuda">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="container">
+    <h1>Minesweeper</h1>
+
+    <div id="minesweeper">
+      <div class="board-placeholder"></div>
+
+      <div class="controls">
+        <div class="new-game-control">
+          <div class="new-game-control-field">
+            <label for="new-game-rows">Rows</label><!--
+            --><input id="new-game-rows" type="text" value="8" />
+          </div>
+
+          <div class="new-game-control-field">
+            <label for="new-game-columns">Columns</label><!--
+            --><input id="new-game-columns" type="text" value="8" />
+          </div>
+
+          <div class="new-game-control-field">
+            <label for="new-game-level">Difficulty</label><!--
+            --><select id="new-game-level">
+              <option value="easy">Easy</option>
+              <option value="medium" selected="selected">Medium</option>
+              <option value="hard">Hard</option>
+              <option value="insane">Insane</option>
+            </select>
+          </div>
+
+          <div class="new-game-control-field submit-field">
+            <button class="create-board control-bt">Start new game</button>
+          </div>
+        </div>
+
+        <button class="validate-board control-bt">Validate board</button>
+
+        <p class="message"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="javascripts/vendor/jquery/jquery.js" type="text/javascript"></script>
+  <script src="javascripts/app/minesweeper.js" type="text/javascript"></script>
+  <script src="javascripts/application.js" type="text/javascript"></script>
+</body>
+
+</html>

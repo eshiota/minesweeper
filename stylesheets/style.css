@@ -1,0 +1,280 @@
+/*******************************************************************************
+*  Minesweeper styles
+*******************************************************************************/
+
+/*********************************************************************
+*  =Reset
+*
+*  html5doctor.com Reset Stylesheet
+*  (Eric Meyer's Reset Reloaded + HTML5 baseline)
+*  v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
+*  html5doctor.com/html-5-reset-stylesheet/
+*********************************************************************/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li, a,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { display: block; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+/*********************************************************************
+*  =Base styles
+*********************************************************************/
+
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body,
+select { color: #555; }
+
+/* 16px / 16px - 100% */
+body {
+  font: normal normal 100%/1.5 sans-serif;
+  background-color: #fefefa;
+}
+
+p { margin-bottom: 1.5em; }
+
+
+/*********************************************************************
+*  =Headers
+*********************************************************************/
+
+h1 {
+  /* 56px / 16px */
+  font: normal 500 3.5em/1 "Museo Sans", "Gill Sans", sans-serif;
+  margin-bottom: .857142857em; /* 48px / 56px */
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*********************************************************************
+*  =Main app
+*********************************************************************/
+
+#container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2em 0; /* 32px / 16px */
+}
+
+/*********************************************************************
+*  =Form elements
+*********************************************************************/
+
+input[type="text"] {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  padding: .5em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/*********************************************************************
+*  =Board
+*********************************************************************/
+
+.board {
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/*********************************************************************
+*  =Controls
+*********************************************************************/
+
+.controls {
+  width: 31.25em; /* 500px / 16px */
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 1.5em; /* 24px / 16px */
+  margin-top: 1.5em; /* 24px / 16px */
+  overflow: hidden;
+}
+
+/* ==Buttons
+**********************************************/
+.control-bt {
+  border: 0;
+  background: #41bdce;
+  padding: .5em 1em;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ==New Game
+**********************************************/
+.new-game-control {
+  background: #fefefe;
+  border: 1px solid #dadada;
+  padding: .625em; /* 10px / 16px */
+  width: 200px;
+  float: left;
+}
+
+.new-game-control label,
+.new-game-control input,
+.new-game-control select {
+  display: inline-block;
+}
+
+.new-game-control label {
+  font-size: .875em; /* 14px / 16px */
+  display: inline-block;
+  width: 40%;
+}
+
+.new-game-control input {
+  width: 3em;
+  text-align: center;
+}
+
+.new-game-control select {
+  width: 60%;
+}
+
+.new-game-control .submit-field {
+  margin-top: .5em;
+}
+
+/* ==Validate board button
+**********************************************/
+.validate-board {
+  background: #905194;
+  font-size: 1.125em; /* 18px / 16px */
+  float: right;
+}
+
+/* ==Message
+**********************************************/
+.message {
+  float: right;
+  font-size: 1.3125em; /* 21px / 16px */
+}
+
+.message.positive {
+  color: #090;
+}
+
+.message.negative {
+  color: #900;
+}
+
+/*********************************************************************
+*  =Tiles
+*********************************************************************/
+
+.tile {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  float: left;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  border: 1px solid #bbb;
+  background: #dadada;
+  cursor: pointer;
+  text-align: center;
+}
+
+.tile:hover {
+  -webkit-transition: all .15s ease-out;
+     -moz-transition: all .15s ease-out;
+      -ms-transition: all .15s ease-out;
+          transition: all .15s ease-out;
+  background: #a7c6d6;
+}
+
+.first-column {
+  clear: left;
+}
+
+/* ==Locked tile
+**********************************************/
+.locked .tile {
+  cursor: default;
+}
+
+.locked .tile:hover {
+  background: #dadada;
+}
+
+/* ==Exploded tile
+**********************************************/
+.exploded,
+.exploded:hover,
+.locked .exploded:hover { background: #ba2323; }
+
+/* ==Found tile
+**********************************************/
+.found,
+.found:hover,
+.locked .found:hover { background: #2ec439; }
+
+/* ==Revelead tile
+**********************************************/
+.revealed,
+.revealed:hover,
+.locked .revealed:hover { background: #fefefe; }
+
+/* mine numbers colors */
+.qty-1 { color: #3b48ad; }
+.qty-2 { color: #3fad3b; }
+.qty-3 { color: #ad3b3b; }
+.qty-4 { color: #27327d; }
+.qty-5 { color: #7d274e; }
+.qty-6 { color: #2d918c; }
+.qty-7 { color: #cc9e14; }
+.qty-8 { color: #333; }
+
+/* ==Cheat mode
+**********************************************/
+@-webkit-keyframes blink {
+  0% { background: #dadada; }
+  50% { background: #b8d4ea; }
+  100% { background: #dadada; }
+}
+
+@-moz-keyframes blink {
+  0% { background: #dadada; }
+  50% { background: #b8d4ea; }
+  100% { background: #dadada; }
+}
+
+@keyframes blink {
+  0% { background: #dadada; }
+  50% { background: #b8d4ea; }
+  100% { background: #dadada; }
+}
+
+.cheat,
+.cheat:hover,
+.locked .cheat:hover {
+  -webkit-animation-name: blink;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+     -moz-animation-name: blink;
+     -moz-animation-duration: 1.5s;
+     -moz-animation-iteration-count: infinite;
+          animation-name: blink;
+          animation-duration: 1.5s;
+          animation-iteration-count: infinite;
+  background: #b8d4ea;
+}
